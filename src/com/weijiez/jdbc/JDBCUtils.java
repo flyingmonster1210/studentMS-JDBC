@@ -2,9 +2,7 @@ package com.weijiez.jdbc;
 
 import java.io.IOException;
 import java.io.InputStream;
-import java.sql.Connection;
-import java.sql.DriverManager;
-import java.sql.SQLException;
+import java.sql.*;
 import java.util.Properties;
 
 public class JDBCUtils {
@@ -39,5 +37,25 @@ public class JDBCUtils {
             System.out.println("FAILURE: unsuccessfully connect to the database");
         }
         return null;
+    }
+
+    // close everything
+    public static void close(Connection connection, Statement statement, ResultSet resultSet) {
+        try {
+            if (resultSet != null) {
+                resultSet.close();
+                resultSet = null; // when object is null, it will be deleted automatically
+            }
+            if (connection != null) {
+                connection.close();
+                connection = null; // when object is null, it will be deleted automatically
+            }
+            if (statement != null) {
+                statement.close();
+                statement = null; // when object is null, it will be deleted automatically
+            }
+        } catch (SQLException throwable) {
+        throwable.printStackTrace();
+    }
     }
 }
