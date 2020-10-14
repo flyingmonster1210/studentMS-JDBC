@@ -1,7 +1,6 @@
 /**
  * Date: 2020/10/10
  * Author: Weijie Zeng
- * Reference: https://www.bilibili.com/video/BV1gt411G7Di?p=3
  */
 package com.weijiez.jdbc;
 
