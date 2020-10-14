@@ -10,14 +10,26 @@ public class View {
     private static Scanner input = new Scanner(System.in);
 
     public static User indexView() {
-        System.out.println("**************************************************");
-        System.out.println("**********\t\tStudent Information Manager System\t\t**********");
-        System.out.println("**********\t\tusername: \t\t**********");
+        System.out.println("**********************************");
+        System.out.println("**********\tStudentMS\t**********");
+        System.out.println("**********\tusername: \t**********");
         String username = input.nextLine();
-        System.out.println("**********\t\tpassword: \t\t**********");
+        System.out.println("**********\tpassword: \t**********");
         String password = input.nextLine();
-        System.out.println("**************************************************");
+        System.out.println("**********************************");
 
         return new User(username, password);
+    }
+
+    public static int managerMenuView() {
+        System.out.println("**********************************");
+        System.out.println("**********\tStudentMS\t**********");
+        System.out.println("**********\tusername: \t**********");
+        String username = input.nextLine();
+        System.out.println("**********\tpassword: \t**********");
+        String password = input.nextLine();
+        System.out.println("**********************************");
+
+        return 1;
     }
 }
