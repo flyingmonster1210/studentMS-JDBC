@@ -28,7 +28,7 @@ public class User {
 
     @Override
     public String toString() {
-        return "User [id=" + id + ", username=" + username + ", password=" + password + ", type=" + type + "]";
+        return "User [id = " + id + ", username = " + username + ", password = " + password + ", type = " + type + "]";
     }
 
     public int getId() {

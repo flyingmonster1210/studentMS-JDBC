@@ -12,6 +12,6 @@ public interface UserDao {
     int login(User user);
     boolean insert(User user);
     boolean delete(String username);
-    boolean update(String username);
+    boolean update(User user);
     User select(String username);
 }
